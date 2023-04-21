@@ -6,7 +6,8 @@
   <h2>Notifications</h2>
   <% @user.notifications.order(created_at: :desc).each do |notification| %>
     <hr>
-    <p><%= notification.title %></p>
+    <p><%= notification.created_at %></p>
+    <strong><%= notification.title %></strong>
     <%= simple_format notification.body %>
   <% end %>
 </div>
