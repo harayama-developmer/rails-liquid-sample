@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
 
-Things you may want to cover:
+gem `liquid`を使うと動的コンテンツを作成できる。
+例として、メルマガみたいなテンプレートを作成して登録ユーザーの名前を動的に変えたい場合のサンプルコードです。
 
-* Ruby version
+{{ name }}と書くことで動的に値が変わります。
 
-* System dependencies
+https://shopify.github.io/liquid/
 
-* Configuration
+Shopifyなどで使われているようです。
 
-* Database creation
+### Message
+![RailsLiquidSample](https://user-images.githubusercontent.com/44060633/233688693-a5cf9836-3a35-4612-bc80-4ae440d92989.png)
 
-* Database initialization
+### User#1
+![RailsLiquidSample](https://user-images.githubusercontent.com/44060633/233688756-54613d0d-b8c3-4953-9d78-6a07987108b5.png)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### User#2
+![RailsLiquidSample](https://user-images.githubusercontent.com/44060633/233688811-11fdf57f-a12e-4529-b1a2-d6e1300819c0.png)

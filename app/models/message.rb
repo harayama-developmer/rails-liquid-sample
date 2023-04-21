@@ -5,7 +5,10 @@ class Message < ApplicationRecord
 
   def notify_users
     User.all.each do |user|
-      user.notifications.create!(title: title, body: body)
+      liquid_template = Liquid::Template.parse(body)
+      liquid_body = liquid_template.render("name" => user.name)
+
+      user.notifications.create!(title: title, body: liquid_body)
     end
   end
 end
